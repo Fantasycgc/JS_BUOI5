@@ -12,7 +12,7 @@
     />
     <link rel="stylesheet" href="/assets/css/style.min.css" />
   </head>
-  <body>
+  <body style="background-color: black">
     <div class="container py-5">
       <div class="card w-75 mx-auto">
         <div class="bg-holder d-none d-lg-block bg-card"></div>
@@ -165,18 +165,8 @@
                 aria-labelledby="v-pills-home-tab"
               >
                 <h4 class="card--heading">🔋 Tính tiền điện</h4>
-                <!-- <div class="callout callout-info">
-                  <p>💡<b>Gợi ý:</b></p>
-                  <details>
-                    <summary>Mở rộng để xem thêm</summary>
-                    <p class="px-3">
-                      Cách tính tiền điện gần giống với bài tính tiền Grab trên
-                      lớp <br />
-                      <img class="img-fluid" src="./img/Bai2.JPG" alt="" />
-                    </p>
-                  </details>
-                </div> -->
-                <form class="row gy-3 align-items-center px-2">
+
+                <form class="row gy-3 align-items-center px-2" id="powerForm">
                   <div class="col-12 col-lg-4">
                     <input
                       type="text"
@@ -188,17 +178,16 @@
 
                   <div class="col-12 col-lg-4">
                     <input
-                      type="number"
+                      type="text"
                       class="form-control form__input"
                       id="inputKW"
                       placeholder="Nhập số kw"
                     />
                   </div>
-
                   <div class="col-12">
                     <button
                       class="btn btn--primary me-1 mb-1"
-                      type="button"
+                      type="submit"
                       id="btnElecBill"
                     >
                       Tính tiền điện
@@ -256,7 +245,7 @@
                     </ul>
                   </details>
                 </div>
-                <form class="row gy-3 align-items-center px-2">
+                <form class="row gy-3 align-items-center px-2" id="taxForm">
                   <div class="col-12 col-lg-4">
                     <input
                       type="text"
@@ -267,7 +256,7 @@
                   </div>
                   <div class="col-12 col-lg-4">
                     <input
-                      type="number"
+                      type="text"
                       class="form-control form__input"
                       id="inputSalary"
                       placeholder="Tổng thu nhập năm"
@@ -275,7 +264,7 @@
                   </div>
                   <div class="col-12 col-lg-4">
                     <input
-                      type="number"
+                      type="text"
                       class="form-control form__input"
                       id="inputUser"
                       placeholder="Số người phụ thuộc"
@@ -285,7 +274,7 @@
                   <div class="col-12">
                     <button
                       class="btn btn--primary me-1 mb-1"
-                      type="button"
+                      type="submit"
                       id="btnTax"
                     >
                       Tính tiền thuế
@@ -329,13 +318,13 @@
                     </ul>
                   </details>
                 </div>
-                <form class="row gy-3 align-items-center px-2">
+                <form class="row gy-3 align-items-center px-2" id="cableForm">
                   <div class="col-12 col-lg-4">
                     <select
                       class="form-control form__input"
                       name=""
                       id="selCustomer"
-                      onchange="disableInput()"
+                      onchange="showConnect()"
                     >
                       <option value="">Chọn loại khách hàng</option>
                       <option value="user">Nhà Dân</option>
@@ -371,7 +360,7 @@
                   <div class="col-12">
                     <button
                       class="btn btn--primary me-1 mb-1"
-                      type="button"
+                      type="submit"
                       id="btnNet"
                     >
                       Tính tiền cáp
@@ -393,6 +382,7 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="/app/controllers/process.js"></script>
     <script type="module" src="/app/controllers/main.js"></script>
   </body>
 </html>
