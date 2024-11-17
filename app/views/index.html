@@ -205,46 +205,7 @@
                 aria-labelledby="v-pills-home-tab"
               >
                 <h4 class="card--heading">💰 Tính thuế thu nhập cá nhân</h4>
-                <div class="callout callout-info">
-                  <p>💡<b>Gợi ý:</b></p>
-                  <details>
-                    <summary>Mở rộng để xem thêm</summary>
-                    <ul>
-                      <li>
-                        Tổng thu nhập năm các bạn tự nhập thêm. Giả sử 1 tháng
-                        thu nhập 10tr thì 1 năm sẽ là 10 x 12 = 120tr => các bạn
-                        sẽ nhập 120000000
-                      </li>
-                      <li>
-                        Demo hiện tại đang tính % thuế theo điều kiện mà thu
-                        nhập chịu thuế rơi vào. Vd: thu nhập chịu thuế là 110tr
-                        thì tính 10% của 110tr => 110tr * 0.1
-                      </li>
-                      <li>
-                        Do đề bài không ghi rõ yêu cầu tính thuế nên cũng có thể
-                        tính theo cách chia ra từng đoạn thuế giống bài tính
-                        tiền grab. Vd: 110tr => 60tr *0.05 + (110tr-60tr) * 0.1
-                      </li>
-                      <li>
-                        Sử dụng input có type number thì khi nhập 120000000, có
-                        thể nhập ngắn gọn thành 120e+6
-                      </li>
-                      <li>
-                        Đối với các con số hàng triệu có nhiều số 0, có thể viết
-                        ngắn gọn trong code như sau:<br />
-                        4tr => 4000000 => 4e+6
-                      </li>
-                      <li>
-                        Dùng NumberFormat để số tiền hiển thị đẹp hơn:
-                        <a
-                          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat"
-                          target="_blank"
-                          >NumberFormat</a
-                        >
-                      </li>
-                    </ul>
-                  </details>
-                </div>
+
                 <form class="row gy-3 align-items-center px-2" id="taxForm">
                   <div class="col-12 col-lg-4">
                     <input
@@ -292,32 +253,7 @@
                 aria-labelledby="v-pills-home-tab"
               >
                 <h4 class="card--heading">🕸️ Tính tiền cáp</h4>
-                <div class="callout callout-info">
-                  <p>💡<b>Gợi ý:</b></p>
-                  <details>
-                    <summary>Mở rộng để xem thêm</summary>
-                    <ul>
-                      <li>
-                        Sử dụng event onchange của dropdown để xử lý ẩn hiện cho
-                        ô nhập số kết nối khi chọn loại khách hàng:
-                        <a
-                          href="https://www.w3schools.com/jsref/event_onchange.asp"
-                          target="_blank"
-                          >Onchange</a
-                        >
-                      </li>
-                      <li>
-                        Đối với loại khách hàng Doanh Nghiệp, tổng 10 kết nối
-                        đầu là 75$ <br />
-                        => đây là giá trọn gói, nếu doanh nghiệp lắp đặt số kết
-                        nối nhỏ hơn 10 thì vẫn phải đóng 75$.<br />
-                        Vd: 6 kết nối thì vẫn sẽ cộng 75$ vào tổng tiền.<br />
-                        => Nếu lắp trên 10 kết nối thì kết nối thứ 11 trở đi sẽ
-                        tính 5$/kết nối.
-                      </li>
-                    </ul>
-                  </details>
-                </div>
+
                 <form class="row gy-3 align-items-center px-2" id="cableForm">
                   <div class="col-12 col-lg-4">
                     <select
